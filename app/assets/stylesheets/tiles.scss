@@ -1,3 +1,358 @@
 // Place all the styles related to the Tiles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+}
+
+p#notice {
+  position: absolute;
+  z-index: 2;
+}
+
+#tools_box {
+  /*-webkit-user-select: none;*/
+  width: 40px;
+  padding: 10px;
+  /*background-color: white;
+  border: 1px solid silver;*/
+  float: right;
+  font-size: smaller;
+  position: fixed;
+  margin-top: 10px;
+  text-align: center;
+  background-color: white;
+  z-index: 2;
+}
+
+#tools_box p {
+  margin: 0 0 4px;
+}
+
+#tools_box input[type=search] {
+  width: 40px;
+}
+
+/*#container {
+  width: 600px;
+  height: 100%;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  margin-right: 100px;
+  margin-left: 60px;
+  position: fixed;
+  background-color: #fcfcfc;
+}*/
+
+#container {
+  background-color: #fcfcfc;
+  width: 6000px;
+  /*margin-left: 550px;*/
+  margin-right: 100px;
+  z-index: 0;
+}
+
+h1 {
+  text-align: right;
+}
+
+#container .fiche {
+  margin-right: 100px;
+  /*-webkit-user-select: none;*/
+  background-color: white;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid silver;
+  width: 500px;
+  display: inline-block;
+  height: 3000px;
+    overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+#container .fiche article {
+  width: 380px;
+}
+
+#notes .fiche {
+  margin-right: 100px;
+  /*-webkit-user-select: none;*/
+  background-color: white;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid silver;
+  width: 440px;
+  display: block;
+}
+
+#fiches_index tr td {
+  border-top: 1px solid silver;
+  font-size: 13px;
+}
+
+#notes {
+  margin-left: 60px;
+  color: gray;
+  font-size: 9px;
+  padding: 10px;
+  width: 500px;
+  z-index: 0;
+  float: left;
+}
+
+#notes p {
+  font-size: 9px;
+}
+
+#notes .fiches div.actions {
+  float: left;
+  background-color: white;
+}
+
+
+h2, h3 {
+  margin-top: 0;
+}
+
+article input {
+  /*border:  none;*/
+}
+
+div.actions {
+  float: right;
+  background-color: white;
+}
+
+div.actions a {
+  color: gray;
+  background-color: white;
+  text-decoration: none;
+  &:hover {
+    color: #fff;
+    background-color: #000; }
+}
+
+div.related_fiches {
+  text-align: right;
+}
+
+a {
+  color: white;
+  background-color: gray;
+}
+
+article a {
+  color: black;
+  background-color: transparent;
+  border-bottom-style: dotted;
+  border-bottom-width: 1px;
+  text-decoration: none;
+}
+
+p.summa-q-title {
+  font-size: 10px;
+  font-style: italic;
+}
+
+p.summa-q-title:before {
+  content: "(in ";
+}
+
+p.summa-q-title:after {
+  content: ")";
+}
+
+#notes a, div.related_fiches a {
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+div.related_fiches a {
+padding-right: 2px;
+padding-left: 2px;
+  font-size: 11px;
+}
+
+#notes div.related_fiches a {
+  display: fiche;
+  clear: left;
+  float: left;
+}
+
+a.person {
+  background-color: #fe7a7d;
+  color: white;
+}
+
+a.text {
+  background-color: #80b380;
+  font-style: italic;
+  color: white;
+}
+
+a.book {
+  background-color: #127b12;
+  font-style: italic;
+  color: white;
+}
+
+a.category {
+  background-color: #4f4fab;
+  color: white;
+}
+
+a.me {
+  background-color: #ae7cb9;
+  color: white;
+}
+
+article a.person {
+  color: #c64a4d;
+  background-color: white;
+}
+
+article a.text {
+  color: #597859;
+  font-style: italic;
+  background-color: white;
+
+}
+
+article a.book {
+  color: #127b12;
+  font-style: italic;
+  background-color: white;
+
+}
+
+article a.category {
+  color: #4f4fab;
+  background-color: white;
+}
+
+article a.me {
+  color: #a700a7;
+  background-color: white;
+}
+
+p.summa-ad, p.summa-co, p.summa-sc, p.summa-arg {
+  font: 9px/1.5 "Lucida Grande", Lucida, Verdana, sans-serif;
+  color: gray;
+}
+
+article p span.fr {
+  /*float: right;*/
+  /*padding-left: 20px;*/
+  /*font-style: italic;*/
+  /*clear: right;*/
+  /*padding-bottom: 10px;*/
+  /*width: 51%;*/
+  font-size: 11px;
+  display: block;
+  color: black;
+  -webkit-border-radius: 5px;
+  line-height: 1.8;
+  border: 1px solid #f3f3f3;
+  padding-left: 4px;
+}
+
+p.summa-sc span.fr {
+  background-color: #fffefa;
+  font-size: 12px;
+  margin-left: 50px;
+  padding: 5px;
+}
+
+/*article a:after {
+  content: " ("attr(href)")";
+}*/
+
+p.summa-co {
+  border-left: 3px double gray;
+  padding-left: 5px;
+}
+
+span.ref {
+  font-size: 8px;
+  font-style: italic;
+  display: none;
+}
+
+/*span.comment:before {
+  content: "<";
+}
+
+span.comment:after {
+  content: ">";
+}*/
+
+/*span.comment {
+  float: left;
+  clear: both;
+  max-width: 240px;
+  font: 9px "Lucida Grande", Lucida, Verdana, sans-serif;
+  text-align: center;
+  -webkit-user-modify: read-only;
+  box-shadow: 0 0px 3px silver;
+  background-color: white;
+  -webkit-border-radius: 4px;
+  padding-right: 3px;
+  padding-left: 3px;
+  margin-left: -260px;
+}*/
+
+span.comment {
+  clear: both;
+  min-width: 110px;
+  max-width: 240px;
+  font: 9px "Lucida Grande", Lucida, Verdana, sans-serif;
+  text-align: right;
+  /*-webkit-user-select: none;*/
+  -webkit-user-modify: read-only;
+  box-shadow: 0 0px 3px silver;
+  background-color: white;
+  -webkit-border-radius: 4px;
+  padding-right: 3px;
+  padding-left: 3px;
+  float: right;
+  margin-right: -120px;
+  color: gray;
+}
+
+
+span.comment a {
+  font-size: 9px;
+}
+
+span.ref-bible {
+  font: 9px "Lucida Grande", Lucida, Verdana, sans-serif;
+  color: #e40000;
+  vertical-align: 3px;
+  -webkit-user-modify: read-only;
+}
+
+article {
+  -webkit-user-modify: read-only;
+  /*-webkit-user-select: none;*/
+  white-space: pre-wrap;
+}
+
+article:focus {
+  outline: none;
+  /*box-shadow: 0 1px 5px #c2cafd;*/
+}
+
+span.comment:focus {
+  outline: none;
+  box-shadow: 1px 0px 5px #7bbafd;
+  /*font-size: 11px;*/
+  color: black;
+}
+
+span.marker:after {
+  content: "◉";
+  text-shadow: 0px 0px 3px #231dfe;
+  color: white;
+  font-weight: normal;
+  font-style: normal;
+}

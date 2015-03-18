@@ -32,6 +32,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# added gems
+gem 'jquery-ui-rails', '~> 5.0.3'
+gem 'backbone-on-rails', '~> 1.1.2.0'
+# gem 'requirejs-rails', '~> 0.9.5'
+
+
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
   gem 'debugger'
