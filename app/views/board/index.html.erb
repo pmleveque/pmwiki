@@ -4,9 +4,7 @@
 
 <script type="text/javascript">
 
-$(function() {
-    window.tiles = <%= @tiles.to_json.html_safe -%>
-});
+  window.tiles = <%= @tiles.to_json.html_safe -%>
 </script>
 
 <p id="notice"><%= notice %></p>

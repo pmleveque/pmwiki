@@ -1,0 +1,14 @@
+<div class="actions">
+  <a href="" class="prev">⬆</a> —
+  <a href="" class="next">⬇</a> —
+  <a href="" class="sanitize">sn</a> —
+  <a href="" class="save">Enregistrer</a> —
+  <a href="" class="move">D&eacute;placer</a> —
+  <a href="" class="close">Fermer</a>
+  <!-- <a href="" class="destroy">Supprimer</a>  -->
+</div>
+<h3><%= expression %></h3>  <!-- (<%= id %>) -->
+<article><%= description %></article>
+<div class="related_fiches">
+
+</div>

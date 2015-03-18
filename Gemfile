@@ -35,6 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # added gems
 gem 'jquery-ui-rails', '~> 5.0.3'
 gem 'backbone-on-rails', '~> 1.1.2.0'
+
 # gem 'requirejs-rails', '~> 0.9.5'
 
 
@@ -49,5 +50,6 @@ group :development, :test do
   gem 'spring'
 
   gem 'forgery', '0.6.0'
+  gem 'coffee-script-source', '~> 1.9.1'
 end
 
