@@ -1,4 +1,33 @@
-<h1>Board#index</h1>
 <p>Here is the board where tiles will be displayed. For now, see:
 <a href="tiles/">Tiles index</a>
 </p>
+
+<script type="text/javascript">
+
+$(function() {
+    window.tiles = <%= @tiles.to_json.html_safe -%>
+});
+</script>
+
+<p id="notice"><%= notice %></p>
+<div id="tools_box">
+  <input type="text" style="opacity:0;" disabled="disabled" value="" id="orInput">
+  <input type="search" name="afficher" autocorrect="off" autocapitalize="none" value="" id="afficher">
+  <input type="button" value="x" id="button_editmode">
+  <!-- <input type="button" value="Paste" id="button_paste" exec="paste"> -->
+  <input type="button" value="Save" id="button_save">
+  <input type="button" value="✍" id="button_comment">
+  <!-- <input type="button" value="⚓" id="button_newlink"> -->
+  <input type="button" value="G" id="style_g" exec="bold">
+  <input type="button" value="I" id="style_i" exec="italic">
+  <input type="button" value="S" id="style_s" exec="underline">
+  <!-- <input type="button" value="☤" id="style_sn"> -->
+  <!-- <h2>Modifiés</h2>
+  <ul id="unsavedList"></ul> -->
+</div>
+
+<div id="notes">
+</div>
+
+<div id="container">
+</div>
