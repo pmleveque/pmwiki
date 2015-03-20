@@ -7,8 +7,9 @@
   <a href="" class="close">Fermer</a>
   <!-- <a href="" class="destroy">Supprimer</a>  -->
 </div>
-<h3><%= expression %></h3>  <!-- (<%= id %>) -->
-<article><%= description %></article>
+<%= console.log(this) %>
+<h3><%= this.title %></h3>  <!-- (<%= this.id %>) -->
+<article><%= this.text %></article>
 <div class="related_fiches">
 
 </div>

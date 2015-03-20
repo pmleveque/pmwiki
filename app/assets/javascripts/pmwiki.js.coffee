@@ -8,7 +8,7 @@ window.Pmwiki =
       {tiles: window.tiles}
     )
 
-    #Backbone.history.start({pushState: true})
+    Backbone.history.start({pushState: true})
 
 $(document).ready ->
   Pmwiki.initialize()

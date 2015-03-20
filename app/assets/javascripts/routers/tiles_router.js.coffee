@@ -17,28 +17,28 @@ class Pmwiki.Routers.TilesRouter extends Backbone.Router
             $("#aftiler").val("")
 
         # Get tiles that are saved locally
-        if localStorage.getItem("ids")
-          localids = _.uniq(localStorage.getItem("ids").split(","))
-          localids.push localStorage.getItem("lastmodified")
+        # if localStorage.getItem("ids")
+        #   localids = _.uniq(localStorage.getItem("ids").split(","))
+        #   localids.push localStorage.getItem("lastmodified")
 
-          router.addNote @tiles.get(1)
+        #   router.addNote @tiles.get(1)
 
-          $.each localids, () ->
-            if this.valueOf() isnt "null"
-              tile = router.tiles.get(this)
-              link = $("<a>").attr("href","/tiles/#{this}").html(tile.get('title'))
-              $("#5945 article").prepend("\n").prepend(link) unless $("#5945 article a[href='/tiles/#{tile.id}']").length > 0
-              #router.show(tile.id)
+        #   $.each localids, () ->
+        #     if this.valueOf() isnt "null"
+        #       tile = router.tiles.get(this)
+        #       link = $("<a>").attr("href","/tiles/#{this}").html(tile.get('title'))
+        #       $("#5945 article").prepend("\n").prepend(link) unless $("#5945 article a[href='/tiles/#{tile.id}']").length > 0
+        #       #router.show(tile.id)
 
 
     # @view = new Pmwiki.Views.TilesIndex(tiles: @tiles)
     # $("#tiles").html(@view.render().el)
     @index()
 
-    $(".comment").live "mouseenter", (e) ->
+    $(".comment").on "mouseenter", (e) ->
       $(this).after("<span class='marker'>")
 
-    $(".comment").live "mouseleave", (e) ->
+    $(".comment").on "mouseleave", (e) ->
       $(".marker").remove()
 
     $("#button_editmode").on "click", () ->
@@ -123,7 +123,7 @@ class Pmwiki.Routers.TilesRouter extends Backbone.Router
     #$("#new-tile-view").html(@view.render().el)
 
   index: ->
-    @addNote @tiles.get(258)
+    @addNote @tiles.get(1)
     #@view = new Pmwiki.Views.TilesIndex(collection: @tiles)
 
   summaq: (p,q) ->

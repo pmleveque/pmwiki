@@ -1,6 +1,6 @@
 class Pmwiki.Views.TilesShow extends Backbone.View
   #template: JST["backbone/templates/tiles/show"]
-  template: JST['tiles/index']
+  template: JST['tiles/show']
 
   tagName: "div"
 
@@ -82,14 +82,14 @@ class Pmwiki.Views.TilesShow extends Backbone.View
       return false
     else
       @model.set "text", textValue
-      localStorage.setItem(@model.id, textValue)
-      localStorage.setItem("lastmodified", @model.id)
+      # localStorage.setItem(@model.id, textValue)
+      # localStorage.setItem("lastmodified", @model.id)
       return true
 
   save: (event) ->
     event.preventDefault()
     @model.save()
-    localStorage.setItem("ids", localStorage.getItem("ids") + ",#{@model.id}")
+    # localStorage.setItem("ids", localStorage.getItem("ids") + ",#{@model.id}")
 
   # reset: (event) ->
   #   event.preventDefault()
@@ -226,8 +226,9 @@ class Pmwiki.Views.TilesShow extends Backbone.View
 
   render: ->
     # if localStorage !!
-    if localStorage.getItem(@model.id)
-      @model.set "text", localStorage.getItem(@model.id)
-    $(@el).attr('id', "#{@model.id}").addClass('tile').html(@template(@model.toJSON() ))
+    # if localStorage.getItem(@model.id)
+    #   @model.set "text", localStorage.getItem(@model.id)
+    $(@el).attr('id', "#{@model.id}").addClass('tile').html(@template(@model.attributes))
+
     @$("article a, .related_tiles a").sanitizeLink()
     return this
