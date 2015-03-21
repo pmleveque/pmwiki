@@ -19,8 +19,8 @@ class Pmwiki.Views.TilesShow extends Backbone.View
     @model.on "sync", =>
       @model.trigger "markAsSynced"
     @model.on "scrollTo", =>
-      $.scrollTo(@$el, 300, {offset: -20})
-
+      $("html,body").animate
+        scrollTop: @$el.offset().top - 20
 
   markAsModified: ->
     @$el.css("border-color", "red")
