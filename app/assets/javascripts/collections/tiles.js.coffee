@@ -2,8 +2,11 @@ class Pmwiki.Collections.Tiles extends Backbone.Collection
   model: Pmwiki.Models.Tile
   url: '/tiles.json'
 
-  newWithExpression: (title) ->
+  # This function makes it possible to create a new title
+  # while editing another one.
+  newWithTitle: (title) ->
     newTile = new Pmwiki.Models.Tile({title: title})
+    # @todo explain what this.add() does exacte
     @add newTile
     newTile.on "all", (event) ->
       console.log "newTile:event", event, this

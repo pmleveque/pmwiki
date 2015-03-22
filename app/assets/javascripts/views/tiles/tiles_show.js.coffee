@@ -72,7 +72,7 @@ class Pmwiki.Views.TilesShow extends Backbone.View
       setTimeout () ->
         # Il y a deux éléments:
         # 1) Le lien dans la tile à annoter: event.target !!!! pas utilisé pour l'instant
-        # 2) La tile vers laquelle pointe le lien, à aftiler latéralement: tile
+        # 2) La tile vers laquelle pointe le lien, à afficher latéralement: tile
         router.addNote(tile, event.target)
       , 300
 
@@ -211,7 +211,7 @@ class Pmwiki.Views.TilesShow extends Backbone.View
           e.preventDefault()
 
           #NOUVELLE FICHE si "$" !!!
-          router.tiles.newWithExpression($("#autocomplete_input").val()) if (e.which == 36)
+          router.tiles.newWithTitle($("#autocomplete_input").val()) if (e.which == 36)
 
           $("body").unbind('keypress')
           $("#autocomplete_input").autocomplete("destroy")

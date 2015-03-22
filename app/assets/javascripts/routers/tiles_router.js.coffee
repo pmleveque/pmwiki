@@ -4,9 +4,10 @@ class Pmwiki.Routers.TilesRouter extends Backbone.Router
     # D'abord les tiles principales
     @tiles.reset options.tiles
     # Puis toutes les tiles
+    # @todo explain what this.fetch() does
     @tiles.fetch
       success: () =>
-        $("#aftiler").autocomplete
+        $("#afficher").autocomplete
           minLength: 3
           autoFocus: true
           source:  @tiles.map (tile) ->
@@ -14,7 +15,7 @@ class Pmwiki.Routers.TilesRouter extends Backbone.Router
 
           select: ( event, ui ) =>
             @show(ui.item.id)
-            $("#aftiler").val("")
+            $("#afficher").val("")
 
         # Get tiles that are saved locally
         # if localStorage.getItem("ids")
