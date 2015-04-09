@@ -1,3 +1,4 @@
+/public/assets/source_maps/
 *.rbc
 capybara-*.html
 .rspec
